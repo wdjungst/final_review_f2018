@@ -4,7 +4,8 @@
   "scripts": {
     "build": "cd client && npm install && npm run build",
     "prep": "cp -a client/dist/. public",
-    "deploy": "npm run build && npm run prep"
+    "deploy": "npm run build && npm run prep",
+    "heroku-postbuild": "npm run deploy && echo 'Client Build'"
   },
   "main": "index.js",
   "author": "David Jungst <djungst@gmail.com>",
